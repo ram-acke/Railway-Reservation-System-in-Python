@@ -1,0 +1,31 @@
+_________________----Database Command of Railway Reservation System-----________________________________________
+Connecting Python to Mysql
+Open Command Prompt and past this below code 
+Make sure your internet is connected
+Command :-  pip install mysql-connector-python
+
+
+Line 1 	:-  	create database rail;
+Line 2 	:-  	use rail;
+Line 3	:-	create table train_details (Sr_no INT UNIQUE,Train_no int(6) Primary key,Train_Name Varchar(10),Arrival_Time Time NOT NULL,Departure_Time Time NOT NULL,Route varchar(50) NOT NULL);
+Line 4	:-	desc train_details; 
+Line 5	:-	create table Passengers(PNR int(4) Primary Key NOT NULL,Pname varchar(25) NOT NULL,Age int(2) NOT NULL,Train_no int(6) NOT NULL,Coach Varchar(3) NOT NULL,Seat varchar(5) unique NOT NULL,Amount int(4) NOT NULL,Gender Char(1) NOT NULL,Journey_Date Date,_FROM varchar(15) NOT NULL,_TO varchar(15) NOT NULL,Booking_Date DATETIME DEFAULT CURRENT_TIMESTAMP);
+Line 6	:-	desc Passengers;
+Line 7 :- 	create table admin (Name char(18) NOT NULL,Contact_No int(10) unique NOT NULL,Username varchar(18) primary key NOT NULL,Password varchar(8) NOT NULL);
+Line 8 :- 	desc admin;
+Line 9 	:-	create table login(userid varchar(20) primary key NOT NULL,pass varchar(18) NOT NULL,name char(20) NOT NULL);
+Line 10 :-	desc login;
+
+
+_____________________________________ Train Details Insert Command _____________________________
+State name :- Delhi,Gujrat Mumbai Kolata Goa
+
+# copy karo niche ka pura or paste kr do mysql me direct database use kr ke
+
+insert into train_details (Sr_no,Train_no,Arrival_Time,Departure_Time,Train_Name,Route) values (1,20211,'01:15:00','02:00:00','GOA EXP','Delhi,Gujrat,Mumbai,Kolkata');
+insert into train_details (Sr_no,Train_no,Arrival_Time,Departure_Time,Train_Name,Route) values (2,20222,'01:15:00','13:00:00','Summer EXP','Goa,Gujrat,Kolkata,Delhi');
+insert into train_details (Sr_no,Train_no,Arrival_Time,Departure_Time,Train_Name,Route) values (3,20233,'11:15:00','02:00:00','Winter EXP','Delhi,Gujrat,Mumbai,Kolkata');
+insert into train_details (Sr_no,Train_no,Arrival_Time,Departure_Time,Train_Name,Route) values (4,20244,'10:15:00','03:00:00','Gujart EXP','Gujrat,Goa,Mumbai,Kolkata');
+insert into train_details (Sr_no,Train_no,Arrival_Time,Departure_Time,Train_Name,Route) values (5,20255,'13:15:00','18:00:00','Mumbai EXP','Kolkata,Gujrat,Mumbai,Goa');
+insert into train_details (Sr_no,Train_no,Arrival_Time,Departure_Time,Train_Name,Route) values (6,20266,'22:15:00','01:00:00','GOA EXP','Delhi,Gujrat,Mumbai,Kolkata');
+
